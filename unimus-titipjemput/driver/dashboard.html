@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — Driver TitipMus</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link href="../assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="dash-shell">
+  <div class="sidebar-backdrop"></div>
+  <aside class="sidebar theme-driver">
+    <div class="side-brand"><span class="mark">T</span><div class="fw-bold text-white" style="font-family:var(--font-display);">TitipMus</div></div>
+    <div class="side-role">Akun Driver</div>
+    <nav>
+      <div class="nav-section">Menu Utama</div>
+      <a href="dashboard.html" class="side-link active"><span class="ic"><i class="bi bi-grid-1x2-fill"></i></span> Dashboard</a>
+      <a href="pesanan.html" class="side-link"><span class="ic"><i class="bi bi-signpost-split-fill"></i></span> Kelola Pesanan</a>
+      <a href="riwayat.html" class="side-link"><span class="ic"><i class="bi bi-clock-history"></i></span> Riwayat Antar</a>
+      <div class="nav-section">Akun</div>
+      <a href="profil.html" class="side-link"><span class="ic"><i class="bi bi-person-circle"></i></span> Profil & Kendaraan</a>
+      <a href="../auth/login.html" class="side-link"><span class="ic"><i class="bi bi-box-arrow-right"></i></span> Keluar</a>
+    </nav>
+    <div class="side-foot text-white-50">Masuk sebagai<br><span class="text-white fw-semibold">Rangga Pratama</span></div>
+  </aside>
+
+  <div class="main-col">
+    <div class="topbar">
+      <div class="d-flex align-items-center gap-3">
+        <button class="sidebar-toggle btn-icon"><i class="bi bi-list fs-5"></i></button>
+        <div class="page-title">Dashboard Driver</div>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <div class="form-check form-switch mb-0">
+          <input class="form-check-input" type="checkbox" role="switch" id="statusOnline" checked>
+          <label class="form-check-label small fw-semibold" for="statusOnline">Online</label>
+        </div>
+        <button class="btn-icon position-relative"><i class="bi bi-bell"></i><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:.55rem;">3</span></button>
+        <div class="avatar-chip">RP</div>
+      </div>
+    </div>
+
+    <div class="content-pad">
+
+      <div class="rounded-4 p-4 mb-4 text-white" style="background: linear-gradient(120deg, var(--color-driver) 0%, var(--color-driver-dark) 100%);">
+        <div class="row align-items-center g-3">
+          <div class="col-md-8">
+            <h2 class="text-white h4 mb-2">Semangat pagi, Rangga 🛵</h2>
+            <p class="text-white-50 mb-0">Ada 2 pesanan baru menunggu di area sekitarmu. Yuk cek dan terima orderan.</p>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <a href="pesanan.html" class="btn btn-light">Lihat Pesanan Baru</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-3 mb-4">
+        <div class="col-6 col-lg-3">
+          <div class="stat-card"><div class="stat-label">Pesanan Hari Ini</div><div class="stat-value">6</div></div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="stat-card"><div class="stat-label">Pendapatan Hari Ini</div><div class="stat-value">Rp84rb</div></div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="stat-card"><div class="stat-label">Rating Saya</div><div class="stat-value">4.9</div></div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="stat-card"><div class="stat-label">Total Selesai</div><div class="stat-value">312</div></div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-7">
+          <div class="card-tm">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h3 class="h6 mb-0">Pesanan Baru — Perlu Direspons</h3>
+                <span class="badge-status badge-pending">2 Menunggu</span>
+              </div>
+              <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+                <li class="border rounded-3 p-3">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-mono small text-secondary">#TM-2591 · Titip Barang</span>
+                    <span class="fw-bold">Rp19.000</span>
+                  </div>
+                  <div class="route-labels mb-2" style="font-family:var(--font-body); text-transform:none; letter-spacing:0; font-size:.85rem;">
+                    <span>Indomaret Kedungmundu</span><span>Kos Griya Asri</span>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <button class="btn btn-driver btn-sm flex-fill">Terima</button>
+                    <button class="btn btn-outline-brand btn-sm flex-fill">Tolak</button>
+                  </div>
+                </li>
+                <li class="border rounded-3 p-3">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-mono small text-secondary">#TJ-1183 · Antar Jemput</span>
+                    <span class="fw-bold">Rp12.000</span>
+                  </div>
+                  <div class="route-labels mb-2" style="font-family:var(--font-body); text-transform:none; letter-spacing:0; font-size:.85rem;">
+                    <span>Kos Griya Asri</span><span>Kampus UNIMUS</span>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <button class="btn btn-driver btn-sm flex-fill">Terima</button>
+                    <button class="btn btn-outline-brand btn-sm flex-fill">Tolak</button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="card-tm h-100">
+            <div class="card-body">
+              <h3 class="h6 mb-3">Pesanan Sedang Diantar</h3>
+              <div class="text-mono text-secondary small mb-2">#TM-2607 · Titip Barang</div>
+              <div class="route-line mb-1"><span class="node"></span><span class="dashes"></span><span class="node accent"></span></div>
+              <div class="route-labels mb-3"><span>Kos Griya Asri</span><span>Fotokopi Kalimasada</span></div>
+              <label class="form-label">Ubah Status Pesanan</label>
+              <select class="form-select mb-3">
+                <option>Menuju Titik Jemput</option>
+                <option selected>Barang Diambil, Menuju Tujuan</option>
+                <option>Sudah Sampai Tujuan</option>
+              </select>
+              <button class="btn btn-driver w-100">Selesaikan Pesanan</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/script.js"></script>
+</body>
+</html>

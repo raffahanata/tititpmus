@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Antar Jemput — TitipMus</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link href="../assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="dash-shell">
+  <div class="sidebar-backdrop"></div>
+  <aside class="sidebar theme-customer">
+    <div class="side-brand"><span class="mark">T</span><div class="fw-bold text-white" style="font-family:var(--font-display);">TitipMus</div></div>
+    <div class="side-role">Akun Mahasiswa</div>
+    <nav>
+      <div class="nav-section">Menu Utama</div>
+      <a href="dashboard.html" class="side-link"><span class="ic"><i class="bi bi-grid-1x2-fill"></i></span> Dashboard</a>
+      <a href="titip-barang.html" class="side-link"><span class="ic"><i class="bi bi-basket2-fill"></i></span> Titip Barang</a>
+      <a href="antar-jemput.html" class="side-link active"><span class="ic"><i class="bi bi-person-arms-up"></i></span> Antar Jemput</a>
+      <a href="riwayat.html" class="side-link"><span class="ic"><i class="bi bi-clock-history"></i></span> Riwayat Pesanan</a>
+      <div class="nav-section">Akun</div>
+      <a href="profil.html" class="side-link"><span class="ic"><i class="bi bi-person-circle"></i></span> Profil Saya</a>
+      <a href="../auth/login.html" class="side-link"><span class="ic"><i class="bi bi-box-arrow-right"></i></span> Keluar</a>
+    </nav>
+    <div class="side-foot text-white-50">Masuk sebagai<br><span class="text-white fw-semibold">Aulia Rahma</span></div>
+  </aside>
+
+  <div class="main-col">
+    <div class="topbar">
+      <div class="d-flex align-items-center gap-3">
+        <button class="sidebar-toggle btn-icon"><i class="bi bi-list fs-5"></i></button>
+        <div class="page-title">Antar Jemput</div>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <button class="btn-icon"><i class="bi bi-bell"></i></button>
+        <div class="avatar-chip">AR</div>
+      </div>
+    </div>
+
+    <div class="content-pad">
+      <div class="row g-4">
+
+        <div class="col-lg-5">
+          <div class="card-tm">
+            <div class="card-body">
+              <h3 class="h6 mb-3"><i class="bi bi-plus-circle text-success me-1"></i> Buat Pesanan Antar Jemput</h3>
+              <form>
+                <div class="mb-3">
+                  <label class="form-label">Titik Jemput</label>
+                  <input type="text" class="form-control" placeholder="mis. Kos Griya Asri, Kedungmundu">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Titik Tujuan</label>
+                  <input type="text" class="form-control" placeholder="mis. Gedung Kuliah FTIK UNIMUS">
+                </div>
+                <div class="row g-3 mb-3">
+                  <div class="col-6">
+                    <label class="form-label">Tanggal</label>
+                    <input type="date" class="form-control">
+                  </div>
+                  <div class="col-6">
+                    <label class="form-label">Jam Jemput</label>
+                    <input type="time" class="form-control">
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Jenis Perjalanan</label>
+                  <select class="form-select">
+                    <option>Sekali Jalan (Instan)</option>
+                    <option>Terjadwal Harian</option>
+                    <option>Pulang-Pergi</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Catatan untuk Driver</label>
+                  <textarea class="form-control" rows="2" placeholder="mis. Bawa 1 tas ransel, tunggu di depan gerbang"></textarea>
+                </div>
+                <div class="rounded-3 p-3 mb-3" style="background:var(--color-primary-light);">
+                  <div class="d-flex justify-content-between fw-bold"><span>Total Estimasi</span><span>Rp12.000</span></div>
+                </div>
+                <button type="submit" class="btn btn-brand w-100 py-2">Buat Pesanan</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="card-tm">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h3 class="h6 mb-0">Pesanan Antar Jemput Saya</h3>
+                <input type="text" class="form-control form-control-sm w-auto" placeholder="Cari pesanan..." data-search-input="#tableJemput">
+              </div>
+              <div class="table-responsive">
+                <table class="table table-tm align-middle mb-0" id="tableJemput">
+                  <thead>
+                    <tr><th>ID</th><th>Rute</th><th>Jadwal</th><th>Status</th><th class="text-end">Aksi</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-mono">#TJ-1183</td>
+                      <td>Kos Griya Asri → Kampus UNIMUS</td>
+                      <td>17 Jul, 06:45</td>
+                      <td><span class="badge-status badge-pending">Menunggu Driver</span></td>
+                      <td class="text-end">
+                        <button class="btn-icon" title="Edit" data-bs-toggle="modal" data-bs-target="#modalEditJemput"><i class="bi bi-pencil"></i></button>
+                        <button class="btn-icon js-confirm-delete" data-label="pesanan #TJ-1183" title="Batalkan"><i class="bi bi-x-lg text-danger"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-mono">#TJ-1170</td>
+                      <td>Kampus UNIMUS → Stasiun Poncol</td>
+                      <td>12 Jul, 15:00</td>
+                      <td><span class="badge-status badge-done">Selesai</span></td>
+                      <td class="text-end">
+                        <button class="btn-icon" title="Detail" data-bs-toggle="modal" data-bs-target="#modalDetailJemput"><i class="bi bi-eye"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-mono">#TJ-1159</td>
+                      <td>Kos Griya Asri → Kampus UNIMUS</td>
+                      <td>08 Jul, 07:00</td>
+                      <td><span class="badge-status badge-done">Selesai</span></td>
+                      <td class="text-end">
+                        <button class="btn-icon js-confirm-delete" data-label="pesanan #TJ-1159" title="Hapus dari riwayat"><i class="bi bi-trash text-danger"></i></button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalEditJemput" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title">Edit Pesanan #TJ-1183</h5><button class="btn-close" data-bs-dismiss="modal"></button></div>
+      <div class="modal-body">
+        <div class="mb-3"><label class="form-label">Jam Jemput</label><input type="time" class="form-control" value="06:45"></div>
+        <div class="mb-3"><label class="form-label">Catatan</label><textarea class="form-control" rows="2">Tunggu di depan gerbang kos ya kak</textarea></div>
+      </div>
+      <div class="modal-footer"><button class="btn btn-outline-brand" data-bs-dismiss="modal">Batal</button><button class="btn btn-brand">Simpan Perubahan</button></div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalDetailJemput" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title">Detail Pesanan #TJ-1170</h5><button class="btn-close" data-bs-dismiss="modal"></button></div>
+      <div class="modal-body">
+        <div class="route-line mb-1"><span class="node"></span><span class="dashes"></span><span class="node accent"></span></div>
+        <div class="route-labels mb-3"><span>Kampus UNIMUS</span><span>Stasiun Poncol</span></div>
+        <ul class="list-unstyled small text-secondary mb-0">
+          <li class="mb-2"><strong class="text-dark">Driver:</strong> Bagas W. — ⭐ 4.8</li>
+          <li class="mb-2"><strong class="text-dark">Total:</strong> Rp16.000</li>
+          <li><strong class="text-dark">Status:</strong> Selesai, 12 Jul 2026 15:26</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/script.js"></script>
+</body>
+</html>

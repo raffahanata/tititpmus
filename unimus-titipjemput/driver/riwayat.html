@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riwayat Antar — Driver TitipMus</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link href="../assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="dash-shell">
+  <div class="sidebar-backdrop"></div>
+  <aside class="sidebar theme-driver">
+    <div class="side-brand"><span class="mark">T</span><div class="fw-bold text-white" style="font-family:var(--font-display);">TitipMus</div></div>
+    <div class="side-role">Akun Driver</div>
+    <nav>
+      <div class="nav-section">Menu Utama</div>
+      <a href="dashboard.html" class="side-link"><span class="ic"><i class="bi bi-grid-1x2-fill"></i></span> Dashboard</a>
+      <a href="pesanan.html" class="side-link"><span class="ic"><i class="bi bi-signpost-split-fill"></i></span> Kelola Pesanan</a>
+      <a href="riwayat.html" class="side-link active"><span class="ic"><i class="bi bi-clock-history"></i></span> Riwayat Antar</a>
+      <div class="nav-section">Akun</div>
+      <a href="profil.html" class="side-link"><span class="ic"><i class="bi bi-person-circle"></i></span> Profil & Kendaraan</a>
+      <a href="../auth/login.html" class="side-link"><span class="ic"><i class="bi bi-box-arrow-right"></i></span> Keluar</a>
+    </nav>
+    <div class="side-foot text-white-50">Masuk sebagai<br><span class="text-white fw-semibold">Rangga Pratama</span></div>
+  </aside>
+
+  <div class="main-col">
+    <div class="topbar">
+      <div class="d-flex align-items-center gap-3">
+        <button class="sidebar-toggle btn-icon"><i class="bi bi-list fs-5"></i></button>
+        <div class="page-title">Riwayat Antar</div>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <button class="btn-icon"><i class="bi bi-bell"></i></button>
+        <div class="avatar-chip">RP</div>
+      </div>
+    </div>
+
+    <div class="content-pad">
+      <div class="row g-3 mb-4">
+        <div class="col-6 col-lg-3"><div class="stat-card"><div class="stat-label">Minggu Ini</div><div class="stat-value">38</div><div class="stat-delta up">▲ 6 dari minggu lalu</div></div></div>
+        <div class="col-6 col-lg-3"><div class="stat-card"><div class="stat-label">Pendapatan Minggu Ini</div><div class="stat-value">Rp512rb</div></div></div>
+        <div class="col-6 col-lg-3"><div class="stat-card"><div class="stat-label">Rating Rata-rata</div><div class="stat-value">4.9</div></div></div>
+        <div class="col-6 col-lg-3"><div class="stat-card"><div class="stat-label">Pesanan Ditolak</div><div class="stat-value">3</div></div></div>
+      </div>
+
+      <div class="card-tm">
+        <div class="card-body">
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+            <h3 class="h6 mb-0">Riwayat Pesanan Selesai</h3>
+            <input type="text" class="form-control form-control-sm w-auto" placeholder="Cari ID / customer..." data-search-input="#tableRiwayatDriver">
+          </div>
+          <div class="table-responsive">
+            <table class="table table-tm align-middle mb-0" id="tableRiwayatDriver">
+              <thead><tr><th>ID</th><th>Layanan</th><th>Customer</th><th>Tanggal</th><th>Pendapatan</th><th>Rating</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td class="text-mono">#TJ-1170</td><td>Antar Jemput</td><td>Bunga Citra</td><td>12 Jul 2026</td><td>Rp16.000</td><td>⭐ 5.0</td>
+                  <td><span class="badge-status badge-done">Selesai</span></td>
+                </tr>
+                <tr>
+                  <td class="text-mono">#TM-2588</td><td>Titip Barang</td><td>Aulia Rahma</td><td>10 Jul 2026</td><td>Rp14.000</td><td>⭐ 4.8</td>
+                  <td><span class="badge-status badge-done">Selesai</span></td>
+                </tr>
+                <tr>
+                  <td class="text-mono">#TJ-1159</td><td>Antar Jemput</td><td>Aulia Rahma</td><td>08 Jul 2026</td><td>Rp12.000</td><td>⭐ 4.9</td>
+                  <td><span class="badge-status badge-done">Selesai</span></td>
+                </tr>
+                <tr>
+                  <td class="text-mono">#TM-2540</td><td>Titip Barang</td><td>Deni Kurniawan</td><td>06 Jul 2026</td><td>—</td><td>—</td>
+                  <td><span class="badge-status badge-cancel">Ditolak Driver</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/script.js"></script>
+</body>
+</html>
